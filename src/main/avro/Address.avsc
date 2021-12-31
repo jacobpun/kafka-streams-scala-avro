@@ -1,0 +1,30 @@
+{
+  "namespace": "com.pk.model",
+  "type": "record",
+  "name": "Address",
+  "fields": [
+    {
+      "name": "addressLine1",
+      "type": "string"
+    },
+    {
+      "name": "addressLine2",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    {
+      "name": "city",
+      "type": "string"
+    },
+    {
+      "name": "state",
+      "type": "string"
+    },
+    {
+      "name": "zip",
+      "type": "string"
+    }
+  ]
+}

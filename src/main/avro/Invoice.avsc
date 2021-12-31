@@ -1,0 +1,33 @@
+{
+  "namespace": "com.pk.model",
+  "type": "record",
+  "name": "Invoice",
+  "fields": [
+    {
+      "name": "invoiceNumber",
+      "type": "string"
+    },
+    {
+      "name": "customerNumber",
+      "type": "string"
+    },
+    {
+      "name": "deliveryType",
+      "type": "string"
+    },
+    {
+      "name": "deliveryAddress",
+      "type": [
+        "null",
+        "Address"
+      ]
+    },
+    {
+      "name": "lineItems",
+      "type": {
+        "type": "array",
+        "items": "Item"
+      }
+    }
+  ]
+}

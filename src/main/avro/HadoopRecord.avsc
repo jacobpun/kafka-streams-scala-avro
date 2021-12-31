@@ -1,0 +1,27 @@
+{
+  "namespace": "com.pk.model",
+  "type": "record",
+  "name": "HadoopRecord",
+  "fields": [
+    {
+      "name": "invoiceNumber",
+      "type": "string"
+    },
+    {
+      "name": "customerNumber",
+      "type": "string"
+    },
+    {
+      "name": "item",
+      "type": "string"
+    },
+    {
+      "name": "unitPrice",
+      "type": "double"
+    },
+    {
+      "name": "quantity",
+      "type": "int"
+    }
+  ]
+}
