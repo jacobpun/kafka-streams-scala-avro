@@ -9,6 +9,9 @@ import scala.jdk.CollectionConverters._
 object InvoiceSupplier {
   private val random = new Random()
 
+  private val customerNumbers = List("C-1", "C-2", "C-3", "C-4", "C-5")
+  private val storeIds = List("S-1", "S-2", "S-3", "S-4", "S-5")
+
   def nextInvoice(): Invoice = {
     val address = {
       if (random.nextInt(10) > 5)
@@ -32,7 +35,8 @@ object InvoiceSupplier {
 
     new Invoice(
       randomString(10),
-      randomString(12),
+      storeIds(random.nextInt(storeIds.length)),
+      customerNumbers(random.nextInt(customerNumbers.length)),
       if (address == null) AppConfig.onlineDelivery else AppConfig.homeDelivery,
       address,
       lineItems.asJava

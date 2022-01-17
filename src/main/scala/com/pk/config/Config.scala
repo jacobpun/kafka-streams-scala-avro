@@ -9,6 +9,7 @@ object KafkaConfig {
   val notificationTopicName = "notification-topic"
   val hadoopTopicName = "hadoop-record-topic"
   val schemaRegistryUrl = "http://localhost:8081"
+  val storeName = "InvoiceNotificationStore"
 }
 
 object AppConfig {

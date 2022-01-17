@@ -39,7 +39,7 @@ object InvoiceKafkaProducer extends App {
   while (true) {
     val invoice = InvoiceSupplier.nextInvoice()
     logger.info("Invoice: {}", invoice)
-    kafkaProducer.send(new ProducerRecord[String, Invoice](KafkaConfig.invoiceTopicName, invoice.getInvoiceNumber, invoice))
+    kafkaProducer.send(new ProducerRecord[String, Invoice](KafkaConfig.invoiceTopicName, invoice.getStoreId, invoice))
     Thread.sleep(500)
   }
 

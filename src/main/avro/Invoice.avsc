@@ -8,6 +8,10 @@
       "type": "string"
     },
     {
+      "name": "storeId",
+      "type": "string"
+    },
+    {
       "name": "customerNumber",
       "type": "string"
     },
